@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pokemon-test/static/css/main.b4cc248e.css",
+    "main.js": "/pokemon-test/static/js/main.de50b8e0.js",
+    "static/js/787.042dd1cb.chunk.js": "/pokemon-test/static/js/787.042dd1cb.chunk.js",
+    "index.html": "/pokemon-test/index.html",
+    "main.b4cc248e.css.map": "/pokemon-test/static/css/main.b4cc248e.css.map",
+    "main.de50b8e0.js.map": "/pokemon-test/static/js/main.de50b8e0.js.map",
+    "787.042dd1cb.chunk.js.map": "/pokemon-test/static/js/787.042dd1cb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4cc248e.css",
+    "static/js/main.de50b8e0.js"
+  ]
+}
