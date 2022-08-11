@@ -1,38 +1,245 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+   font-family: 'Poppins', sans-serif;
+  
+ }
+
+.img-pokemon {
+  max-width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-pokemon,
+.stats {
+  display: flex;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-pokemon {
+  padding: 4rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .5);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .15);
+  position: relative;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+.nopo{
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 10px;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #333;
+}
+.card-pokemon::before,
+.card-pokemon::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+.card-pokemon::before {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #FFF;
+  border-radius: 10px;
+  top: -.7rem;
+  left: -.7rem;
+}
+.card-pokemon::after {
+  height: 15rem;
+  width: 15rem;
+  background-color: #4172f5aa;
+  top: -8rem;
+  right: -8rem;
+  box-shadow: 2rem 6rem 0 -3rem #FFF
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-pokemon .img-pokemon {
+  background-color: #ffcd03;
+  min-width: 300px;
+  box-shadow: 0 0 0 5px #FFF;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.img-detail{
+  width: 200px;
+  border-radius: 50%;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.img-list{
+  width: 110px;
+  border-radius: 50%;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.info-pokemon {
+  margin-left: 1.5rem;
+}
+
+.name-pokemon {
+  margin-bottom: 1rem;
+}
+.name-pokemon h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 3px 20px;
+  background-color:#ffcd03 ;
+  border-radius: 30px;
+}
+.name-pokemon h5 {
+  font-size: 1rem;
+  color: #333
+}
+.tipe-pokemon{
+  margin-bottom: 1rem;
+}
+.tipe-pokemon h5{
+  font-size: 1rem;
+  color: #333
+}
+.tipe-pokemon .name-poke{
+  display: inline-flex;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-right: 10px;
+  padding: 2px 20px;
+  background-color:#ffcd03 ;
+  border-radius: 30px;
+}
+.stat-pok{
+  margin-bottom: 1rem;
+}
+.stat-pok h5{
+  font-size: 1rem;
+  color: #333
+}
+.stats {
+  margin-bottom: 1rem;
+}
+.stats li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 24px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.stats li h3 {
+  padding: 8px 10px;
+  border-radius: 50%;
+  background-color: #ffcd03;
+ 
+}
+.stats li h4 {
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+
+.berat h5{
+  font-size: 1rem;
+  color: #333
+}
+.berat .ber{
+  display: inline-flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.berat .ber p{
+  font-weight: 1rem;
+  font-weight: 500;
+  margin-right: 20px;
+  padding: 5px 20px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: #3C59A5;
+}
+
+
+.links button {
+  font-family: 'Poppins', sans-serif;
+  min-width: 120px;
+  padding: .5rem;
+  margin-right: 10px;
+  border: 1px solid #222;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .25s linear;
+}
+.links .follow,
+.links .view:hover {
+  background-color: #222;
+  color: #FFF;
+}
+.links .view,
+.links .follow:hover{
+  background-color: transparent;
+  color: #222;
+}
+
+@media screen and (max-width: 760px) {
+  .nopo {
+    right: 25px;
+    font-size: 2.5rem;
+}
+  .card-pokemon {
+    display: block;
+    padding: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+  .img-detail {
+    margin: 20px;
+    width: 120px;
   }
+  .img-list {
+    width: 109px;
+    margin: 15px;
+}
+  .info-pokemon {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+  .links button {
+    min-width: 100px;
+  }
+  .name-pokemon h2 {
+    font-size: 1rem;
+}
+  .tipe-pokemon .name-poke {
+    font-size: 1rem;
+}
+  .stats {
+    overflow: auto;
+  }
+  .stats li h3 {
+    font-size: 12px;
+}
+  .stats li h4 {
+    height: -webkit-fill-available;
+  }
+}
+
+
+
+
+.list-pokemon{
+    position: relative;
+    display: inline-flex;
 }
